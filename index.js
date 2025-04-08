@@ -5,6 +5,7 @@ const SteamUser = require('steam-user');
 const SteamCommunity = require('steamcommunity');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
+const SteamTotp = require('steam-totp');
 
 const app = express();
 const client = new SteamUser();

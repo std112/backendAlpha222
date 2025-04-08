@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const SteamTotp = require('steam-totp');
 
-
 const app = express();
 const client = new SteamUser();
 const community = new SteamCommunity();
@@ -19,7 +18,6 @@ const manager = new TradeOfferManager({
 
 app.use(bodyParser.json());
 
-// Login bot
 client.logOn({
   accountName: process.env.BOT_USERNAME,
   password: process.env.BOT_PASSWORD,

@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 client.logOn({
   accountName: process.env.BOT_USERNAME,
   password: process.env.BOT_PASSWORD,
-  twoFactorCode: SteamUser.generateAuthCode(process.env.BOT_SHARED_SECRET)
+  twoFactorCode: require('steam-totp').generateAuthCode(process.env.BOT_SHARED_SECRET)
 });
 
 client.on('loggedOn', () => {
